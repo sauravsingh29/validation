@@ -87,7 +87,7 @@
 		<property name="fieldName" value="CustomerEmail" />
 		<property name="dataType" value="String" />
 		<property name="maxDataLength" value="80" />
-		<property name="required" value="true" />
+		<property name="required" value="false" />
 		<property name="regexPattern"
 			value="^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$" />
 	</bean>

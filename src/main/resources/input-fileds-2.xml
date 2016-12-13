@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN"
+"http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<import resource="classpath:input-fileds.xml" />
+	<bean id="email" class="com.rxp.apm.validator.bean.InputValueCheck">
+		<property name="fieldName" value="CustomerEmail" />
+		<property name="dataType" value="String" />
+		<property name="maxDataLength" value="80" />
+		<property name="required" value="true" />
+		<property name="regexPattern"
+			value="^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$" />
+	</bean>
+	<bean id="reschdToTimeBean" class="com.rxp.apm.validator.bean.InputValueCheck">
+		<property name="fieldName" value="ReschuledToTime" />
+		<property name="dataType" value="Date" />
+		<property name="maxDataLength" value="6" />
+		<property name="required" value="true" />
+		<property name="dateFormatPattern" value="hhmma" />
+	</bean>
+
+</beans>

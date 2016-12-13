@@ -11,6 +11,7 @@ import java.util.Set;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
 import org.springframework.util.CollectionUtils;
 
@@ -22,6 +23,7 @@ import com.rxp.apm.validator.bean.InputValueCheck;
 import com.rxp.apm.validator.constants.ValidationConstants;
 
 @Component
+@Lazy
 public class RequestValidator<T> implements Validator<T> {
 	
 	@Autowired
@@ -29,6 +31,7 @@ public class RequestValidator<T> implements Validator<T> {
 	
 	@Autowired
 	@Qualifier("inputFieldsCheckDetails")
+	@Lazy
 	private InputFieldsCheckDetails inputFieldsCheckDetails;
 
 	@Override

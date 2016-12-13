@@ -5,39 +5,47 @@ package com.rxp.apm;
 
 import java.io.Serializable;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 /**
  * The Class InputRequest.
+ * 
  * @author ssing69
  */
-public class InputRequest implements Serializable{
-	
+public class InputRequest implements Serializable {
+
 	/** The Constant serialVersionUID. */
 	private static final long serialVersionUID = 688497167363552074L;
-	
+
 	/** The correlation id. */
 	protected String correlationId;
-	
+
 	/** The zip code. */
 	protected String zipCode;
-	
+
 	/** The service type needed. */
 	protected String serviceTypeNeeded;
-	
+
 	/** The customer zip code. */
 	protected String customerZipCode;
-	
+
 	/** The charge code am. */
 	protected String chargeCodeAm;
-	
+
 	/** The primary amount collected. */
 	protected String primaryAmountCollected;
-	
+
 	/** The reschd date. */
 	protected String reschdDate;
-	
+
 	/** The reschd to time. */
 	protected String reschdToTime;
 	
+	protected String custEmail;
+
+	@JsonProperty("comments")
+	private Comments comments;
+
 	/**
 	 * Gets the correlation id.
 	 *
@@ -46,16 +54,17 @@ public class InputRequest implements Serializable{
 	public String getCorrelationId() {
 		return correlationId;
 	}
-	
+
 	/**
 	 * Sets the correlation id.
 	 *
-	 * @param correlationId the correlationId to set
+	 * @param correlationId
+	 *            the correlationId to set
 	 */
 	public void setCorrelationId(String correlationId) {
 		this.correlationId = correlationId;
 	}
-	
+
 	/**
 	 * Gets the zip code.
 	 *
@@ -64,16 +73,17 @@ public class InputRequest implements Serializable{
 	public String getZipCode() {
 		return zipCode;
 	}
-	
+
 	/**
 	 * Sets the zip code.
 	 *
-	 * @param zipCode the zipCode to set
+	 * @param zipCode
+	 *            the zipCode to set
 	 */
 	public void setZipCode(String zipCode) {
 		this.zipCode = zipCode;
 	}
-	
+
 	/**
 	 * Gets the service type needed.
 	 *
@@ -82,16 +92,17 @@ public class InputRequest implements Serializable{
 	public String getServiceTypeNeeded() {
 		return serviceTypeNeeded;
 	}
-	
+
 	/**
 	 * Sets the service type needed.
 	 *
-	 * @param serviceTypeNeeded the serviceTypeNeeded to set
+	 * @param serviceTypeNeeded
+	 *            the serviceTypeNeeded to set
 	 */
 	public void setServiceTypeNeeded(String serviceTypeNeeded) {
 		this.serviceTypeNeeded = serviceTypeNeeded;
 	}
-	
+
 	/**
 	 * Gets the customer zip code.
 	 *
@@ -100,16 +111,17 @@ public class InputRequest implements Serializable{
 	public String getCustomerZipCode() {
 		return customerZipCode;
 	}
-	
+
 	/**
 	 * Sets the customer zip code.
 	 *
-	 * @param customerZipCode the customerZipCode to set
+	 * @param customerZipCode
+	 *            the customerZipCode to set
 	 */
 	public void setCustomerZipCode(String customerZipCode) {
 		this.customerZipCode = customerZipCode;
 	}
-	
+
 	/**
 	 * Gets the charge code am.
 	 *
@@ -118,16 +130,17 @@ public class InputRequest implements Serializable{
 	public String getChargeCodeAm() {
 		return chargeCodeAm;
 	}
-	
+
 	/**
 	 * Sets the charge code am.
 	 *
-	 * @param chargeCodeAm the chargeCodeAm to set
+	 * @param chargeCodeAm
+	 *            the chargeCodeAm to set
 	 */
 	public void setChargeCodeAm(String chargeCodeAm) {
 		this.chargeCodeAm = chargeCodeAm;
 	}
-	
+
 	/**
 	 * Gets the primary amount collected.
 	 *
@@ -136,16 +149,17 @@ public class InputRequest implements Serializable{
 	public String getPrimaryAmountCollected() {
 		return primaryAmountCollected;
 	}
-	
+
 	/**
 	 * Sets the primary amount collected.
 	 *
-	 * @param primaryAmountCollected the primaryAmountCollected to set
+	 * @param primaryAmountCollected
+	 *            the primaryAmountCollected to set
 	 */
 	public void setPrimaryAmountCollected(String primaryAmountCollected) {
 		this.primaryAmountCollected = primaryAmountCollected;
 	}
-	
+
 	/**
 	 * Gets the reschd date.
 	 *
@@ -154,16 +168,17 @@ public class InputRequest implements Serializable{
 	public String getReschdDate() {
 		return reschdDate;
 	}
-	
+
 	/**
 	 * Sets the reschd date.
 	 *
-	 * @param reschdDate the reschdDate to set
+	 * @param reschdDate
+	 *            the reschdDate to set
 	 */
 	public void setReschdDate(String reschdDate) {
 		this.reschdDate = reschdDate;
 	}
-	
+
 	/**
 	 * Gets the reschd to time.
 	 *
@@ -172,17 +187,49 @@ public class InputRequest implements Serializable{
 	public String getReschdToTime() {
 		return reschdToTime;
 	}
-	
+
 	/**
 	 * Sets the reschd to time.
 	 *
-	 * @param reschdToTime the reschdToTime to set
+	 * @param reschdToTime
+	 *            the reschdToTime to set
 	 */
 	public void setReschdToTime(String reschdToTime) {
 		this.reschdToTime = reschdToTime;
 	}
+
+	/**
+	 * @return the comments
+	 */
+	public Comments getComments() {
+		return comments;
+	}
+
+	/**
+	 * @param comments
+	 *            the comments to set
+	 */
+	public void setComments(Comments comments) {
+		this.comments = comments;
+	}
 	
-	/* (non-Javadoc)
+	/**
+	 * @return the custEmail
+	 */
+	public String getCustEmail() {
+		return custEmail;
+	}
+
+	/**
+	 * @param custEmail the custEmail to set
+	 */
+	public void setCustEmail(String custEmail) {
+		this.custEmail = custEmail;
+	}
+
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see java.lang.Object#toString()
 	 */
 	@Override
@@ -207,5 +254,5 @@ public class InputRequest implements Serializable{
 		builder.append("]");
 		return builder.toString();
 	}
-	
+
 }
